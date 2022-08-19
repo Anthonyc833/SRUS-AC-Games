@@ -5,19 +5,19 @@ a_uid = "321"
 a_name = "Tony"
 
 class TestPlayer(unittest.TestCase):
-    def teststr(self):
+    def test_str(self):
         player = Player(a_uid, a_name)
-        self.assertIn(a_uid, player.__str__())
-        self.assertIn(a_name, player.__str__())
+        self.assertIn(a_uid, str(player))
+        self.assertIn(a_name, str(player))
 
 
 
 
 
-def teststr_py():
+def test_str_py():
     player = Player(a_uid, a_name)
     assert a_uid in player.__str__()
     assert a_name in player.__str__()
-    assert(_UID,_Name == tuple(player))
+    assert(a_uid,a_name == tuple(player))
 
 
